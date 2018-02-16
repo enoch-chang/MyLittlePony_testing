@@ -148,5 +148,8 @@ def check_input(num_list):
         raise ValueError('Input list contains imaginary elements!')
 
 
-output = findextremes([1, 2, 3])
-logging.debug('Output:%s', str(output))
+def main(num_list):
+    SumTotal = sum_numbers(num_list)
+    MaxDifference = MaxDiff(num_list)
+    MinAndMax = findextremes(num_list)
+    return SumTotal, MaxDifference, MinAndMax
