@@ -1,10 +1,12 @@
 # Set up logger
 import logging
 log_format = '%(levelname)s %(asctime)s %(message)s'
-logging.basicConfig(filename='divlog.txt', format= log_format, datefmt='%m/%d/%Y %I:%M:%S %p', level=logging.DEBUG,filemode ='w')
-logger = logging.getLogger()
+logging.basicConfig(filename='divlog.txt', format=log_format, datefmt='%m/%d/%Y %I:%M:%S %p', level=logging.DEBUG,filemode ='w')
+logger=logging.getLogger()
 
 def findextremes(num_list):
+
+    
     """ returns the smallest and largest elements in an inputted list
     :param: num_list
     :returns: the smallest and largest elements in input num_list
@@ -36,19 +38,22 @@ def findextremes(num_list):
     logging.info("# Return Minimum and Maximum")
 
 
-    return [minimum,maximum]
+    return [minimum, maximum]
 
 
 def contains_imaginary(num_list):
+
+    
     import numpy as np
     is_real = np.isreal(num_list)
     if False in is_real:
         imaginary_elements = True
     else:
-        imaginary_elements= False
+        imaginary_elements = False
     return imaginary_elements
 
 def check_list(num_list):
+
 
     if type(num_list) == list:
         list_input = True
@@ -57,6 +62,7 @@ def check_list(num_list):
     return list_input
 
 def check_input(num_list):
+
 
     # Check that input is a list
     if check_list(num_list) == False:
@@ -71,5 +77,5 @@ def check_input(num_list):
         logging.error('Input list contains imaginary elements')
         raise ValueError('Input list contains imaginary elements!')
 
-output = findextremes([1,2,3])
+output = findextremes([1, 2, 3])
 logger.debug('Output:%s', str(output))
