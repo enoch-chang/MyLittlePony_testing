@@ -83,8 +83,11 @@ def MaxDiff(num_list):
 # Set up logger
 import logging
 log_format = '%(levelname)s %(asctime)s %(message)s'
-logging.basicConfig(filename='divlog.txt', format= log_format, datefmt='%m/%d/%Y %I:%M:%S %p', level=logging.DEBUG,filemode ='w')
+logging.basicConfig(filename='divlog.txt', format=log_format,
+                    datefmt='%m/%d/%Y %I:%M:%S %p', level=logging.DEBUG,
+                    filemode='w')
 logger = logging.getLogger()
+
 
 def findextremes(num_list):
     """ returns the smallest and largest elements in an inputted list
@@ -94,7 +97,6 @@ def findextremes(num_list):
     :raises: ValueError: Numbers in list must be real numbers
     :raises: ImportError: Numpy must be installed in Env
     """
-
     # Make sure list criteria are met
     try:
         check_input(num_list)
@@ -104,21 +106,16 @@ def findextremes(num_list):
     except TypeError:
         logging.error('Input must be list with entries')
         quit()
-
     try:
         import numpy as np
     except ImportError:
         logging.error('Numpy must be installed in your local environment!')
-
-
     logger.info("# Find Minimum and Maximum")
     logger.debug('Input: %s', str(num_list))
     minimum = np.min(num_list)
     maximum = np.max(num_list)
     logging.info("# Return Minimum and Maximum")
-
-
-    return [minimum,maximum]
+    return [minimum, maximum]
 
 
 def contains_imaginary(num_list):
@@ -127,31 +124,31 @@ def contains_imaginary(num_list):
     if False in is_real:
         imaginary_elements = True
     else:
-        imaginary_elements= False
+        imaginary_elements = False
     return imaginary_elements
 
-def check_list(num_list):
 
+def check_list(num_list):
     if type(num_list) == list:
         list_input = True
     else:
         list_input = False
     return list_input
 
+
 def check_input(num_list):
-
     # Check that input is a list
-    if check_list(num_list) == False:
+    if check_list(num_list) is False:
         raise TypeError('Input must be a list')
-
     # Check that list has entries
     if len(num_list) == 0:
         raise TypeError('Input list is empty')
-
     # Check for imaginary numbers in list
-    if contains_imaginary(num_list) == True:
+    if contains_imaginary(num_list) is True:
         logging.error('Input list contains imaginary elements')
         raise ValueError('Input list contains imaginary elements!')
 
-output = findextremes([1,2,3])
+
+output = findextremes([1, 2, 3])
 logger.debug('Output:%s', str(output))
+

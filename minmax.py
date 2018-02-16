@@ -1,7 +1,8 @@
 # Set up logger
 import logging
 log_format = '%(levelname)s %(asctime)s %(message)s'
-logging.basicConfig(filename='divlog.txt', format=log_format, datefmt='%m/%d/%Y %I:%M:%S %p', level=logging.DEBUG,
+logging.basicConfig(filename='divlog.txt', format=log_format,
+                    datefmt='%m/%d/%Y %I:%M:%S %p', level=logging.DEBUG,
                     filemode='w')
 logger = logging.getLogger()
 
