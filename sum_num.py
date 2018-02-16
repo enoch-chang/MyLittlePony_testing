@@ -149,4 +149,4 @@ def check_input(num_list):
 
 
 output = findextremes([1, 2, 3])
-logger.debug('Output:%s', str(output))
+logging.debug('Output:%s', str(output))
