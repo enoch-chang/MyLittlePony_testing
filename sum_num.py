@@ -80,15 +80,6 @@ def MaxDiff(num_list):
     logging.info('Status quo')
 
 
-# Set up logger
-import logging
-log_format = '%(levelname)s %(asctime)s %(message)s'
-logging.basicConfig(filename='divlog.txt', format=log_format,
-                    datefmt='%m/%d/%Y %I:%M:%S %p', level=logging.DEBUG,
-                    filemode='w')
-logger = logging.getLogger()
-
-
 def findextremes(num_list):
     """ returns the smallest and largest elements in an inputted list
     :param: num_list
@@ -97,6 +88,14 @@ def findextremes(num_list):
     :raises: ValueError: Numbers in list must be real numbers
     :raises: ImportError: Numpy must be installed in Env
     """
+    # Set up logger
+    import logging
+    log_format = '%(levelname)s %(asctime)s %(message)s'
+    logging.basicConfig(filename='divlog.txt', format=log_format,
+                        datefmt='%m/%d/%Y %I:%M:%S %p', level=logging.DEBUG,
+                        filemode='w')
+    logger = logging.getLogger()
+
     # Make sure list criteria are met
     try:
         check_input(num_list)
@@ -151,4 +150,3 @@ def check_input(num_list):
 
 output = findextremes([1, 2, 3])
 logger.debug('Output:%s', str(output))
-
