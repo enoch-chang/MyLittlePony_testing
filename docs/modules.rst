@@ -4,7 +4,7 @@ assignment04
 .. toctree::
    :maxdepth: 4
 
-   conf
+   minmax
    sum_num
    test_max_diff
    test_minmax

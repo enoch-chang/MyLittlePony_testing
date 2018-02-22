@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 #
 # Assignment 5 documentation build configuration file, created by
-# sphinx-quickstart on Wed Feb 14 14:18:19 2018.
+# sphinx-quickstart on Thu Feb 22 13:43:37 2018.
 #
 # This file is execfile()d with the current directory set to its
 # containing dir.
@@ -17,9 +17,9 @@
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 #
-# import os
-# import sys
-# sys.path.insert(0, os.path.abspath('.'))
+import os
+import sys
+sys.path.insert(0, os.path.abspath('..'))
 
 
 # -- General configuration ------------------------------------------------
@@ -64,7 +64,7 @@ release = 'v2.0.0'
 #
 # This is also used if you do content translation via gettext catalogs.
 # Usually you set "language" from the command line for these cases.
-language = 'English'
+language = None
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
@@ -164,3 +164,6 @@ texinfo_documents = [
      author, 'Assignment5', 'One line description of project.',
      'Miscellaneous'),
 ]
+
+
+
