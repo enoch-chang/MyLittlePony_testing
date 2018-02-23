@@ -1,3 +1,5 @@
 02/14/2018 12:42:57 PM All entries successfully added up.
 02/14/2018 12:42:57 PM There is an ImportError
 02/14/2018 12:51:45 PM All entries successfully added up.
+02/21/2018 03:42:07 PM Input must be list with entries
+02/21/2018 03:42:10 PM Input must be list with entries

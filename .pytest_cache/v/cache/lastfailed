@@ -1,10 +1,5 @@
 {
-<<<<<<< HEAD
+  "minmax.py": true,
   "test_max_diff.py::test_max_diff": true,
-  "test_minmax.py::test_minmax": true,
   "test_sum_num.py::test_sum_numbers": true
-=======
-  "conf.py": true,
-  "docs/conf.py": true
->>>>>>> ca4d8f26ce72e614d82ae86cb35531fb1fa6fa4b
 }
